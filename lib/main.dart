@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'homePage.dart';
+import 'home-page.dart';
 import 'auth.dart';
-import 'LoginPage.dart';
+import 'login-page.dart';
 
 void main() => runApp(
       ChangeNotifierProvider<AuthService>(

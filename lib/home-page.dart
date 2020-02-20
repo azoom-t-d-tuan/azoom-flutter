@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'checkTime.dart';
-import 'sabbatical.dart';
+import 'check-time-page.dart';
+import 'sabbatical-page.dart';
 import 'auth.dart';
 
 class HomePage extends StatefulWidget {
