@@ -19,10 +19,38 @@ class SabbaticalState extends State<Sabbatical> {
     super.dispose();
   }
 
+    void _showcontent() {
+    showDialog<Null>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return new AlertDialog(
+          title: new Text('Success'),
+          content: new SingleChildScrollView(
+            child: new ListBody(
+              children: <Widget>[
+                new Text('Leave Application have been submitted!'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            new FlatButton(
+              child: new Text('Ok'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Đơn xin nghỉ phép')),
+      resizeToAvoidBottomPadding: false,
+      appBar: AppBar(title: Text('Leave Application')),
       body: Column(
         children: <Widget>[
           Row(
@@ -170,6 +198,7 @@ class SabbaticalState extends State<Sabbatical> {
                     .document(widget.currentUser['id'])
                     .setData({'sabbatical': _newRecord}, merge: true);
                 Navigator.pop(context);
+                _showcontent();
               },
               child: Text(
                 'Send',
