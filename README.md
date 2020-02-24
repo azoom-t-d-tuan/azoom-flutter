@@ -1,6 +1,15 @@
 # myapp
 
-A new Flutter project.
+1. Download & Install 
+
+https://flutter.dev/docs/get-started/install
+
+2. Set up editor
+Install extensions: Flutter in VSCode
+Install Dart plugin
+Validate setup by Flutter doctor
+
+Ref: https://flutter.dev/docs/get-started/editor?tab=vscode
 
 ## Getting Started
 
